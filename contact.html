@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summit Trail MTB Lessons | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header>
+    <div class="site-header">
+      <span class="site-title">Summit Trail MTB Lessons</span>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1>Book a Lesson</h1>
+      <p>Fill out the form below and we'll follow up within one business day to confirm your lesson time.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </fieldset>
+
+        <fieldset>
+          <legend>Lesson Details</legend>
+
+          <label for="package">Lesson Package</label>
+          <select id="package" name="package" required>
+            <option value="">Select a package</option>
+            <option value="beginner">Beginner: Trail Basics</option>
+            <option value="intermediate">Intermediate: Skills Builder</option>
+            <option value="advanced">Advanced: Technical Terrain</option>
+          </select>
+
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message"></textarea>
+        </fieldset>
+
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Summit Trail MTB Lessons. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
