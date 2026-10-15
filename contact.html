@@ -29,36 +29,40 @@
       <h1>Book a Lesson</h1>
       <p>Fill out the form below and we'll follow up within one business day to confirm your lesson time.</p>
 
-      <form action="#" method="post">
+      <form id="booking-form" action="#" method="post" novalidate>
         <fieldset>
           <legend>Your Information</legend>
 
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" autocomplete="name">
+          <span class="error" id="name-error" role="alert"></span>
 
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <span class="error" id="email-error" role="alert"></span>
 
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+          <span class="error" id="phone-error" role="alert"></span>
         </fieldset>
 
         <fieldset>
           <legend>Lesson Details</legend>
 
           <label for="package">Lesson Package</label>
-          <select id="package" name="package" required>
+          <select id="package" name="package">
             <option value="">Select a package</option>
-            <option value="beginner">Beginner: Trail Basics</option>
-            <option value="intermediate">Intermediate: Skills Builder</option>
-            <option value="advanced">Advanced: Technical Terrain</option>
           </select>
+          <span class="hint" id="prefill-note"></span>
+          <span class="error" id="package-error" role="alert"></span>
 
           <label for="message">Anything else we should know?</label>
           <textarea id="message" name="message"></textarea>
+          <span class="error" id="message-error" role="alert"></span>
         </fieldset>
 
         <button type="submit" class="btn">Submit Request</button>
+        <p id="form-success" class="success" role="status"></p>
       </form>
     </section>
   </main>
@@ -67,5 +71,7 @@
     <p>&copy; 2026 Summit Trail MTB Lessons. All rights reserved.</p>
   </footer>
 
+  <script src="js/data.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
