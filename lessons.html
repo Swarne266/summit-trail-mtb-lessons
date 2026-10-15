@@ -29,23 +29,17 @@
       <h1>Lesson Packages</h1>
       <p>Choose the package that matches your current skill level. All lessons include a helmet fitting, trail safety briefing, and equipment check.</p>
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>Beginner: Trail Basics</h3>
-          <p>2-hour session covering braking, gear shifting, balance, and how to read simple terrain. Held on flat, wide trails.</p>
-          <p><strong>$65 / rider</strong></p>
-        </div>
-        <div class="card">
-          <h3>Intermediate: Skills Builder</h3>
-          <p>3-hour session focused on cornering, climbing technique, and controlled descents on moderate single-track.</p>
-          <p><strong>$95 / rider</strong></p>
-        </div>
-        <div class="card">
-          <h3>Advanced: Technical Terrain</h3>
-          <p>Half-day session on rock gardens, drops, and technical descents, with video review of your riding.</p>
-          <p><strong>$140 / rider</strong></p>
-        </div>
+      <div id="filter-bar" class="filter-bar" role="group" aria-label="Filter lessons by skill level">
+        <button type="button" data-level="All">All</button>
+        <button type="button" data-level="Beginner">Beginner</button>
+        <button type="button" data-level="Intermediate">Intermediate</button>
+        <button type="button" data-level="Advanced">Advanced</button>
       </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <p id="favorite-banner" class="favorite-banner" aria-live="polite"></p>
+
+      <div id="lesson-list" class="card-grid"></div>
+      <noscript><p>Please enable JavaScript to browse and filter lesson packages.</p></noscript>
 
       <a href="contact.html" class="btn">Book a Lesson</a>
     </section>
@@ -55,5 +49,7 @@
     <p>&copy; 2026 Summit Trail MTB Lessons. All rights reserved.</p>
   </footer>
 
+  <script src="js/data.js"></script>
+  <script src="js/lessons.js"></script>
 </body>
 </html>
